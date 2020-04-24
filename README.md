@@ -1,4 +1,5 @@
-# panamajs-botframeworkcomposer
+# Bot Framework Composer en PanamaJS
+
 Hola, comparto con ustedes el material presentado en "PanamaJS: Bot Framework Composer".
 
 1. La carpeta FlutterDemo contiene el chatbot generado desde el Bot Framework Composer.
