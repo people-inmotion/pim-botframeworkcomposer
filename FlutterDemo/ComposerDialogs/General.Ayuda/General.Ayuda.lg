@@ -1,0 +1,14 @@
+[import](common.lg)
+
+# bfdactivity-436733()
+- ```Ayuda
+        - Consultar, permite consultar a una empresa existente
+            - Número de empresa
+        - Agregar, permite crear una empresa nueva
+            - Nombre de la empresa
+            - Nombre del contacto
+            - Teléfono
+            - Correo-e
+        ```
+
+

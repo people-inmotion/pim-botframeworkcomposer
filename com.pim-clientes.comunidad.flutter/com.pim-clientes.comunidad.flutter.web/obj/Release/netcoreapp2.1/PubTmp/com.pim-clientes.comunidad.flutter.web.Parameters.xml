@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="dchumpitaz-001-subsite16" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\projects\\flutter-flosspa\\com\.pim-clientes\.comunidad\.flutter\\com\.pim-clientes\.comunidad\.flutter\.web\\obj\\Release\\netcoreapp2\.1\\PubTmp\\Out\\$" />
+  </parameter>
+</parameters>

@@ -1,0 +1,18 @@
+[import](common.lg)
+
+# bfdactivity-272890()
+[Activity
+    Text = Disculpa, no entendimos tu mensaje.
+    SuggestedActions = Consultar | Agregar | Acerca
+]
+
+# bfdactivity-281020()
+[HeroCard
+    title = Demo de BotFramework Composer
+    subtitle = People in Motion
+    text = Demostración del uso del BotFramework Composer usando servicios web de pruebas.
+    image = http://people-inmotion.com/img/people-inmotion-imagotipo-rojo.png
+    buttons = Consultar | Agregar | Acerca
+]
+
+

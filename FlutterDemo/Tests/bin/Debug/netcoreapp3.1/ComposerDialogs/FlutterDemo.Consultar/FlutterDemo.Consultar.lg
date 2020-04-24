@@ -1,0 +1,37 @@
+[import](common.lg)
+
+# bfdactivity-078594()
+
+[Activity
+    Text = Vamos a consultar un registro.
+    SuggestedActions = Ayuda | Cancelar
+]
+
+# bfdprompt-767068()
+[Activity
+    Text = ¿Cuál es el número de la empresa?
+    SuggestedActions = Ayuda | Cancelar
+]
+
+# bfdunrecognizedPrompt-767068()
+- Lo sentimos, no entendemos '${this.value}'. Por favor, corregir.
+
+# bfdinvalidPrompt-767068()
+- Debe ingresar un valor mayor a 0.
+
+# bfddefaultValueResponse-767068()
+- Valor incorrecto, consultaremos el cliente 1
+
+# bfdactivity-407093()
+- I got an error: ${dialog.api_response.content.message}
+
+# bfdactivity-078031()
+- ```Datos de la empresa consultada (${user.empresa_id})
+        - Empresa: ${dialog.compania.empresa}
+        - Contacto: ${dialog.compania.nombreContacto}
+        - Teléfono: ${dialog.compania.telefonoContacto}
+        - Correo-e: ${dialog.compania.correoContacto}
+        ```
+
+# bfdactivity-600305()
+- ${AlgoMas()}

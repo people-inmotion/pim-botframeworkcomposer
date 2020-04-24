@@ -1,0 +1,123 @@
+{
+  "$type": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "930095",
+    "name": "FlutterDemo.Consultar"
+  },
+  "autoEndDialog": "true",
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$type": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "id": "302389"
+      },
+      "actions": [
+        {
+          "$type": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "078594",
+            "name": "Send a response"
+          },
+          "activity": "${bfdactivity-078594()}"
+        },
+        {
+          "$type": "Microsoft.NumberInput",
+          "$designer": {
+            "id": "767068",
+            "name": "Number input"
+          },
+          "prompt": "${bfdprompt-767068()}",
+          "unrecognizedPrompt": "${bfdunrecognizedPrompt-767068()}",
+          "invalidPrompt": "${bfdinvalidPrompt-767068()}",
+          "defaultValueResponse": "${bfddefaultValueResponse-767068()}",
+          "maxTurnCount": "3",
+          "validations": [
+            "this.value > 0"
+          ],
+          "property": "user.empresa_id",
+          "defaultValue": "1",
+          "alwaysPrompt": "true",
+          "allowInterruptions": "true",
+          "outputFormat": "=this.value",
+          "defaultLocale": "en-us"
+        },
+        {
+          "$type": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "221824",
+            "name": "Send an HTTP request"
+          },
+          "method": "GET",
+          "url": "http://flutter.pim-clientes.com/api/values/${user.empresa_id}",
+          "resultProperty": "dialog.api_response",
+          "responseType": "Json"
+        },
+        {
+          "$type": "Microsoft.LogAction",
+          "$designer": {
+            "id": "360917",
+            "name": "Log to console"
+          },
+          "text": "dialog.api_response",
+          "traceActivity": true
+        },
+        {
+          "$type": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "181354",
+            "name": "Branch: if/else"
+          },
+          "condition": "dialog.api_response.statusCode == 200",
+          "actions": [
+            {
+              "$type": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "528582",
+                "name": "Set a property"
+              },
+              "property": "dialog.compania",
+              "value": "=dialog.api_response.content"
+            },
+            {
+              "$type": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "078031",
+                "name": "Send a response"
+              },
+              "activity": "${bfdactivity-078031()}"
+            }
+          ],
+          "elseActions": [
+            {
+              "$type": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "407093",
+                "name": "Send a response"
+              },
+              "activity": "${bfdactivity-407093()}"
+            },
+            {
+              "$type": "Microsoft.DeleteProperty",
+              "$designer": {
+                "id": "472454",
+                "name": "Delete a property"
+              },
+              "property": "user.empresa_id"
+            }
+          ]
+        },
+        {
+          "$type": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "600305",
+            "name": "Send a response"
+          },
+          "activity": "${bfdactivity-600305()}"
+        }
+      ]
+    }
+  ],
+  "generator": "FlutterDemo.Consultar.lg"
+}

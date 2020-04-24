@@ -1,0 +1,14 @@
+C:\projects\flutter-flosspa\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\bin\Release\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.deps.json
+C:\projects\flutter-flosspa\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\bin\Release\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.runtimeconfig.json
+C:\projects\flutter-flosspa\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\bin\Release\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.runtimeconfig.dev.json
+C:\projects\flutter-flosspa\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\bin\Release\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.dll
+C:\projects\flutter-flosspa\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\bin\Release\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.pdb
+C:\projects\flutter-flosspa\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Release\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.csprojAssemblyReference.cache
+C:\projects\flutter-flosspa\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Release\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.csproj.CoreCompileInputs.cache
+C:\projects\flutter-flosspa\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Release\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.RazorAssemblyInfo.cache
+C:\projects\flutter-flosspa\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Release\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.RazorAssemblyInfo.cs
+C:\projects\flutter-flosspa\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Release\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.AssemblyInfoInputs.cache
+C:\projects\flutter-flosspa\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Release\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.AssemblyInfo.cs
+C:\projects\flutter-flosspa\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Release\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.RazorTargetAssemblyInfo.cache
+C:\projects\flutter-flosspa\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Release\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.dll
+C:\projects\flutter-flosspa\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Release\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.pdb

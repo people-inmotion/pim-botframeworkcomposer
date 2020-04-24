@@ -1,0 +1,267 @@
+{
+  "$type": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "812418",
+    "name": "FlutterDemo.Agregar"
+  },
+  "autoEndDialog": "true",
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$type": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "id": "414730"
+      },
+      "actions": [
+        {
+          "$type": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "244269",
+            "name": "Send a response"
+          },
+          "activity": "${bfdactivity-244269()}"
+        },
+        {
+          "$type": "Microsoft.TextInput",
+          "$designer": {
+            "id": "919509",
+            "name": "Text input"
+          },
+          "prompt": "${bfdprompt-919509()}",
+          "maxTurnCount": "5",
+          "property": "user.empresa_nombre",
+          "alwaysPrompt": "true",
+          "allowInterruptions": "true",
+          "outputFormat": "=trim(this.value)"
+        },
+        {
+          "$type": "Microsoft.TextInput",
+          "$designer": {
+            "id": "601498",
+            "name": "Text input"
+          },
+          "prompt": "${bfdprompt-601498()}",
+          "maxTurnCount": "5",
+          "property": "user.empresa_contacto_nombre",
+          "alwaysPrompt": "true",
+          "allowInterruptions": "true",
+          "outputFormat": "=trim(this.value)"
+        },
+        {
+          "$type": "Microsoft.TextInput",
+          "$designer": {
+            "id": "644913",
+            "name": "Text input"
+          },
+          "prompt": "${bfdprompt-644913()}",
+          "unrecognizedPrompt": "${bfdunrecognizedPrompt-644913()}",
+          "invalidPrompt": "${bfdinvalidPrompt-644913()}",
+          "maxTurnCount": "5",
+          "validations": [
+            "length(this.value) >= 7"
+          ],
+          "property": "user.empresa_telefono",
+          "alwaysPrompt": "true",
+          "allowInterruptions": "true",
+          "outputFormat": "=trim(this.value)"
+        },
+        {
+          "$type": "Microsoft.TextInput",
+          "$designer": {
+            "id": "040806",
+            "name": "Text input"
+          },
+          "prompt": "${bfdprompt-040806()}",
+          "unrecognizedPrompt": "${bfdunrecognizedPrompt-040806()}",
+          "invalidPrompt": "${bfdinvalidPrompt-040806()}",
+          "maxTurnCount": "5",
+          "validations": [
+            "contains(this.value, '@')"
+          ],
+          "property": "user.empresa_correo",
+          "alwaysPrompt": "true",
+          "allowInterruptions": "true",
+          "outputFormat": "=trim(this.value)"
+        },
+        {
+          "$type": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "964322",
+            "name": "Confirmation"
+          },
+          "prompt": "${bfdprompt-964322()}",
+          "maxTurnCount": "3",
+          "property": "user.send_confirm",
+          "alwaysPrompt": "true",
+          "allowInterruptions": "false",
+          "outputFormat": "=this.value",
+          "defaultLocale": "en-us",
+          "style": "Auto",
+          "choiceOptions": {
+            "inlineSeparator": ", ",
+            "inlineOr": " or ",
+            "inlineOrMore": ", or ",
+            "includeNumbers": false
+          },
+          "confirmChoices": [
+            {
+              "value": "Si",
+              "synonyms": [
+                "Sí",
+                "Si"
+              ]
+            },
+            {
+              "value": "No"
+            }
+          ]
+        },
+        {
+          "$type": "Microsoft.LogAction",
+          "$designer": {
+            "id": "790210",
+            "name": "Log to console"
+          },
+          "text": "user.send_confirm",
+          "traceActivity": true
+        },
+        {
+          "$type": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "367418",
+            "name": "Branch: if/else"
+          },
+          "condition": "toUpper(user.send_confirm) == \"SI\"",
+          "actions": [
+            {
+              "$type": "Microsoft.HttpRequest",
+              "$designer": {
+                "id": "101011",
+                "name": "Send an HTTP request"
+              },
+              "method": "POST",
+              "url": "http://flutter.pim-clientes.com/api/values",
+              "body": {
+                "id": "0",
+                "empresa": "${user.empresa_nombre}",
+                "nombreContacto": "${user.empresa_nombre}",
+                "telefonoContacto": "${user.empresa_nombre}",
+                "correoContacto": "${user.empresa_nombre}"
+              },
+              "resultProperty": "dialog.api_response",
+              "responseType": "Json"
+            },
+            {
+              "$type": "Microsoft.LogAction",
+              "$designer": {
+                "id": "636052",
+                "name": "Log to console"
+              },
+              "text": "dialog.api_response",
+              "traceActivity": true
+            },
+            {
+              "$type": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "345358",
+                "name": "Branch: if/else"
+              },
+              "condition": "dialog.api_response.statusCode == 200",
+              "elseActions": [
+                {
+                  "$type": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "120990",
+                    "name": "Send a response"
+                  },
+                  "activity": "${bfdactivity-120990()}"
+                },
+                {
+                  "$type": "Microsoft.DeleteProperties",
+                  "$designer": {
+                    "id": "253627",
+                    "name": "Delete properties"
+                  },
+                  "properties": [
+                    "user.empresa_nombre",
+                    "user.empresa_contacto_nombre",
+                    "user.empresa_telefono",
+                    "user.empresa_correo",
+                    "user.send_confirm"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "$type": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "678601",
+                    "name": "Set a property"
+                  },
+                  "property": "dialog.empresa_creada",
+                  "value": "=dialog.api_response.content"
+                },
+                {
+                  "$type": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "501451",
+                    "name": "Send a response"
+                  },
+                  "activity": "${bfdactivity-501451()}"
+                },
+                {
+                  "$type": "Microsoft.DeleteProperties",
+                  "$designer": {
+                    "id": "761236",
+                    "name": "Delete properties"
+                  },
+                  "properties": [
+                    "user.empresa_nombre",
+                    "user.empresa_contacto_nombre",
+                    "user.empresa_telefono",
+                    "user.empresa_correo",
+                    "user.send_confirm"
+                  ]
+                }
+              ]
+            }
+          ],
+          "elseActions": [
+            {
+              "$type": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "341562",
+                "name": "Send a response"
+              },
+              "activity": "${bfdactivity-341562()}"
+            },
+            {
+              "$type": "Microsoft.DeleteProperties",
+              "$designer": {
+                "id": "703087",
+                "name": "Delete properties"
+              },
+              "properties": [
+                "user.empresa_nombre",
+                "user.empresa_contacto_nombre",
+                "user.empresa_telefono",
+                "user.empresa_correo",
+                "user.send_confirm"
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "460542",
+            "name": "Send a response"
+          },
+          "activity": "${bfdactivity-460542()}"
+        }
+      ]
+    }
+  ],
+  "generator": "FlutterDemo.Agregar.lg"
+}

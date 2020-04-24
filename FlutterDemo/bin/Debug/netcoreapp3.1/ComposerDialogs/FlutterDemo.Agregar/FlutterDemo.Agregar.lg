@@ -1,0 +1,60 @@
+[import](common.lg)
+
+# bfdactivity-244269()
+- Vamos a crear un registro nuevo (4 preguntas).
+
+# bfdprompt-919509()
+[Activity
+    Text = (1) Nombre de la empresa
+    SuggestedActions = Ayuda | Cancelar
+]
+
+# bfdprompt-601498()
+[Activity
+    Text = (2) Nombre del contacto
+    SuggestedActions = Ayuda | Cancelar
+]
+
+# bfdprompt-644913()
+[Activity
+    Text = (3) Número de teléfono
+    SuggestedActions = Ayuda | Cancelar
+]
+
+# bfdunrecognizedPrompt-644913()
+- ${this.value} no es un teléfono válido.
+
+# bfdinvalidPrompt-644913()
+- ${this.value} no es un teléfono válido. Si es teléfono fijo debe tener 7 caracteres. Si es móvil debe tener 8 caracteres.
+
+# bfdprompt-040806()
+[Activity
+    Text = (4) Correo electrónico
+    SuggestedActions = Ayuda | Cancelar
+]
+
+# bfdunrecognizedPrompt-040806()
+- ${this.value} no es un correo válido.
+
+# bfdinvalidPrompt-040806()
+- ${this.value} no es un correo válido. Debe tener una @.
+
+# bfdprompt-964322()
+- ```Estos datos, ¿correctos?
+        - 1. Empresa: ${user.empresa_nombre}
+        - 2. Contacto: ${user.empresa_contacto_nombre}
+        - 3. Teléfono: ${user.empresa_telefono}
+        - 4. Correo-e: ${user.empresa_correo}
+        ```
+
+# bfdactivity-341562()
+- Inténtalo de nuevo :-)
+
+# bfdactivity-120990()
+- Ocurrió un error :-)
+
+# bfdactivity-501451()
+-  Registro creado satisfactoriamente (N° ${dialog.empresa_creada}).
+
+# bfdactivity-460542()
+- ${AlgoMas()}

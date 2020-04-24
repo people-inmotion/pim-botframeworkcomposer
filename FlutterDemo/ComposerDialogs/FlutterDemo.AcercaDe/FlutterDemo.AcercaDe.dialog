@@ -1,0 +1,37 @@
+{
+  "$type": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "533341",
+    "name": "FlutterDemo.AcercaDe"
+  },
+  "autoEndDialog": "true",
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$type": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "id": "770232"
+      },
+      "actions": [
+        {
+          "$type": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "965955",
+            "name": "Send a response"
+          },
+          "activity": "${bfdactivity-965955()}"
+        },
+        {
+          "$type": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "650817",
+            "name": "Send a response"
+          },
+          "activity": "${bfdactivity-650817()}"
+        }
+      ]
+    }
+  ],
+  "generator": "FlutterDemo.AcercaDe.lg"
+}

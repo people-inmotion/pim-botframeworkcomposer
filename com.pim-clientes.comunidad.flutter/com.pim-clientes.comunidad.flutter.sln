@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29215.179
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.pim-clientes.comunidad.flutter.web", "com.pim-clientes.comunidad.flutter.web\com.pim-clientes.comunidad.flutter.web.csproj", "{ABD338C1-6F2D-416C-A7E0-E1D90E0B253B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABD338C1-6F2D-416C-A7E0-E1D90E0B253B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABD338C1-6F2D-416C-A7E0-E1D90E0B253B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABD338C1-6F2D-416C-A7E0-E1D90E0B253B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABD338C1-6F2D-416C-A7E0-E1D90E0B253B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {747D06E0-A7CF-4631-8D0D-1F574D1990C1}
+	EndGlobalSection
+EndGlobal

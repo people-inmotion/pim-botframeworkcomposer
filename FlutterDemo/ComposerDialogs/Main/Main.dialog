@@ -1,0 +1,183 @@
+{
+  "$type": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "$designer": {
+      "name": "FlutterDemo",
+      "description": "Bot que brinda mantenimiento a servicio web hecho para demostración de Flutter.",
+      "id": "556066"
+    }
+  },
+  "autoEndDialog": "true",
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$type": "Microsoft.OnConversationUpdateActivity",
+      "$designer": {
+        "id": "376720"
+      },
+      "actions": [
+        {
+          "$type": "Microsoft.Foreach",
+          "$designer": {
+            "id": "518944",
+            "name": "Loop: for each item"
+          },
+          "itemsProperty": "turn.Activity.membersAdded",
+          "actions": [
+            {
+              "$type": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "641773",
+                "name": "Branch: if/else"
+              },
+              "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
+              "actions": [
+                {
+                  "$type": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "281020",
+                    "name": "Send a response"
+                  },
+                  "activity": "${bfdactivity-281020()}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "$type": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "882304"
+      },
+      "intent": "Acerca",
+      "actions": [
+        {
+          "$type": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "393953",
+            "name": "Begin a new dialog"
+          },
+          "activityProcessed": true,
+          "dialog": "FlutterDemo.AcercaDe"
+        }
+      ]
+    },
+    {
+      "$type": "Microsoft.OnUnknownIntent",
+      "$designer": {
+        "id": "581531"
+      },
+      "actions": [
+        {
+          "$type": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "272890",
+            "name": "Send a response"
+          },
+          "activity": "${bfdactivity-272890()}"
+        }
+      ]
+    },
+    {
+      "$type": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "038890"
+      },
+      "intent": "Consultar",
+      "actions": [
+        {
+          "$type": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "833001",
+            "name": "Begin a new dialog"
+          },
+          "activityProcessed": true,
+          "dialog": "FlutterDemo.Consultar"
+        }
+      ]
+    },
+    {
+      "$type": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "667152"
+      },
+      "intent": "Agregar",
+      "actions": [
+        {
+          "$type": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "202013",
+            "name": "Begin a new dialog"
+          },
+          "activityProcessed": true,
+          "dialog": "FlutterDemo.Agregar"
+        }
+      ]
+    },
+    {
+      "$type": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "454676"
+      },
+      "intent": "Ayuda",
+      "actions": [
+        {
+          "$type": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "971292",
+            "name": "Begin a new dialog"
+          },
+          "activityProcessed": true,
+          "dialog": "General.Ayuda"
+        }
+      ]
+    },
+    {
+      "$type": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "751843"
+      },
+      "intent": "Cancelar",
+      "actions": [
+        {
+          "$type": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "637749",
+            "name": "Begin a new dialog"
+          },
+          "activityProcessed": true,
+          "dialog": "General.Cancelar"
+        }
+      ]
+    }
+  ],
+  "$schema": "https://raw.githubusercontent.com/microsoft/BotFramework-Composer/stable/Composer/packages/server/schemas/sdk.schema",
+  "generator": "Main.lg",
+  "recognizer": {
+    "$type": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "Acerca",
+        "pattern": "acerca"
+      },
+      {
+        "intent": "Consultar",
+        "pattern": "consultar"
+      },
+      {
+        "intent": "Agregar",
+        "pattern": "agregar"
+      },
+      {
+        "intent": "Ayuda",
+        "pattern": "ayuda"
+      },
+      {
+        "intent": "Cancelar",
+        "pattern": "cancelar"
+      }
+    ]
+  }
+}
