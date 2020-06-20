@@ -1,6 +1,6 @@
-# Bot Framework Composer en PanamaJS
+# Bot Framework Composer
 
-Hola, comparto con ustedes el material presentado en "PanamaJS: Bot Framework Composer".
+Hola, comparto con ustedes el material presentado en conferencias sobre Microsoft Bot Framework Composer.
 
 1. La carpeta **FlutterDemo** contiene el chatbot generado desde el Bot Framework Composer.
 2. La carpeta **com.pim-clientes.comunidad.flutter** contiene el servicio web utilizado para la demostración. Está hecho en ASP .NET Core.
