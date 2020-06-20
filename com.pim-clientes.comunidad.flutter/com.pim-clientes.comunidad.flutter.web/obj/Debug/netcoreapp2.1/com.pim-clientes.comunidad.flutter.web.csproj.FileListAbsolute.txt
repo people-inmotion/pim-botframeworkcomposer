@@ -21,7 +21,6 @@ C:\projects\panamajs-botframeworkcomposer\com.pim-clientes.comunidad.flutter\com
 C:\projects\panamajs-botframeworkcomposer\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\bin\Debug\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.dll
 C:\projects\panamajs-botframeworkcomposer\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\bin\Debug\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.pdb
 C:\projects\panamajs-botframeworkcomposer\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Debug\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.csprojAssemblyReference.cache
-C:\projects\panamajs-botframeworkcomposer\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Debug\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.csproj.CoreCompileInputs.cache
 C:\projects\panamajs-botframeworkcomposer\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Debug\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.RazorAssemblyInfo.cache
 C:\projects\panamajs-botframeworkcomposer\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Debug\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.RazorAssemblyInfo.cs
 C:\projects\panamajs-botframeworkcomposer\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Debug\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.AssemblyInfoInputs.cache
@@ -30,3 +29,4 @@ C:\projects\panamajs-botframeworkcomposer\com.pim-clientes.comunidad.flutter\com
 C:\projects\panamajs-botframeworkcomposer\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Debug\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.dll
 C:\projects\panamajs-botframeworkcomposer\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Debug\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.pdb
 C:\projects\panamajs-botframeworkcomposer\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Debug\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.genruntimeconfig.cache
+C:\projects\panamajs-botframeworkcomposer\com.pim-clientes.comunidad.flutter\com.pim-clientes.comunidad.flutter.web\obj\Debug\netcoreapp2.1\com.pim-clientes.comunidad.flutter.web.csproj.CoreCompileInputs.cache
